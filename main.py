@@ -20,7 +20,10 @@ chaine = "01010;11111;11111;01110;00100"
 z=chaine.length/2
 chainep1=chaine[0:z]
 chainep2=chaine[z+1:-1]
-basic.show_string({chainep1},{chainep2})
+final=""
+final.includes(chainep1)
+final.includes(chainep2)
+basic.show_string(final)
 
 def on_forever():
     pass

@@ -22,7 +22,10 @@ let chaine = "01010;11111;11111;01110;00100"
 let z = chaine.length / 2
 let chainep1 = chaine.slice(0, z)
 let chainep2 = chaine.slice(z + 1, -1)
-basic.showString( {TODO: Set} ,  {TODO: Set} )
+let final = ""
+final.includes(chainep1)
+final.includes(chainep2)
+basic.showString(final)
 basic.forever(function on_forever() {
     
 })
