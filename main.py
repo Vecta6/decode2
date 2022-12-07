@@ -1,5 +1,5 @@
 def on_button_pressed_a():
-    radio.send_string("" + (chaine))
+    radio.send_string("")
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
 def on_received_string(receivedString):
@@ -14,16 +14,28 @@ def on_received_string(receivedString):
         o += 1
 radio.on_received_string(on_received_string)
 
+chaine=[]
+chaine.push(0b01010)
+
+sendmess=""
+for i in chaine:
+    sendmess=sendmess+str(int(i))+";"
+sendmess=sendmess[0:-1]
+
+recemess=sendmess.split(";")
+newrecemess=""
+for j in recemess:
+    binarie=str(bin(int(j)))[2::]
+    for n in range(5-len(binarie)):
+        binarie="0"+binarie
+    newrecemess=newrecemess+binarie+";"
+    
+newrecemess=newrecemess[0:-1]
+
 o = 0
 a = 0
-chaine = "01010;11111;11111;01110;00100"
-z=chaine.length/2
-chainep1=chaine[0:z]
-chainep2=chaine[z+1:-1]
-final=""
-final.includes(chainep1)
-final.includes(chainep2)
-basic.show_string(final)
+
+
 
 def on_forever():
     pass
